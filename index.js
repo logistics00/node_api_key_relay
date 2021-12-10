@@ -10,7 +10,11 @@ const weather = require('./weather');
 app.use(express.json());
 
 // replace next with the reaal URL in production
-const whitelist = ['http://127.0.0.1', 'http://127.0.0.1:5500'];
+const whitelist = [
+  'http://127.0.0.1',
+  'http://127.0.0.1:5500',
+  'https://sof-weather.netlify.app/',
+];
 const corsOptions = {
   origin: (origin, callback) => {
     if (!origin || whitelist.indexOf(origin) !== -1) {
